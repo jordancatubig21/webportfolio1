@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - Jordan Santos Catubig</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">Portfolio.</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li class="active"><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="projects" id="projects">
+    <h2 class="heading">Featured <span>Projects</span></h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>Student Manual App</h3>
+        <p>Successfully developed an Android-based student manual app for Camarines Norte State College.</p>
+        <button class="viewProjectBtn" data-img="manualapp.png">View Project</button>
+      </div>
+
+      <div class="project-card">
+        <h3>ARKYVE Website</h3>
+        <p>Arkyve – Study & Co-Work Café. A modern coffee shop website designed for students and professionals, offering a cozy space to study, work, and collaborate.</p>
+        <button class="viewProjectBtn" data-img="RKYVE.jpg">View Project</button>
+      </div>
+
+      <div class="project-card">
+        <h3>Tiyang Amy's Website</h3>
+        <p>Promotes a food business named Meryenda ni Tiyang Amy with an online website to broaden connections and services.</p>
+        <button class="viewProjectBtn" data-img="amy.jpg">View Project</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overlay for Project Images -->
+  <div id="projectOverlay">
+    <img src="" alt="Project Image" id="overlayImg">
+    <button class="closeBtn">Back</button>
+  </div>
+
+  <!-- Project JS -->
+  <script src="project.js"></script>
+</body>
+</html>

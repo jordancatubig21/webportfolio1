@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me - Jordan Santos Catubig</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- GLightbox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">Portfolio.</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="active"><a href="about.html">About Me</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="about" id="about">
+    <div class="about-img">
+      <img src="jordie.jpg" alt="Jordan Catubig Profile Picture" />
+    </div>
+    <div class="about-content">
+      <h2 class="heading">About <span>Me</span></h2>
+      <h3>Aspiring Frontend Developer</h3>
+      <p>Hello! I'm Jordan, a passionate student focused on creating interactive and visually appealing web experiences. I specialize in HTML, CSS, and JavaScript. My goal is to build applications that are not only functional but enjoyable to use.</p>
+      <ul>
+        <li><strong>Skills:</strong> HTML, CSS, JavaScript, Figma, UI/UX Design</li>
+        <li><strong>Education:</strong> Bachelor of Science in Information System</li>
+        <li><strong>Hobbies:</strong> Online games, Crossword Puzzles, Watching Anime, Vector</li>
+      </ul>
+      <a href="#" id="readMoreBtn" class="btn">Show More</a>
+
+      <!-- Hidden Hobbies Section -->
+      <div id="hobbiesSection" class="hobbies">
+        <h3>My Hobbies</h3>
+        <div class="hobby-images">
+          <a href="ml.jpg" class="glightbox" data-gallery="hobbies" data-title="Online Games">
+            <img src="ml.jpg" alt="Online Games">
+          </a>
+          <a href="art.jpg" class="glightbox" data-gallery="hobbies" data-title="Vectors">
+            <img src="art.jpg" alt="Vector">
+          </a>
+          <a href="anime.jpg" class="glightbox" data-gallery="hobbies" data-title="Watching Anime">
+            <img src="anime.jpg" alt="Watching Anime">
+          </a>
+        </div>
+      </div>
+
+      <!-- Hidden Education Section -->
+      <div id="educationSection" class="hobbies">
+        <h3>My Education</h3>
+        <div class="education-images">
+          <a href="elem.jpg" class="glightbox" data-gallery="education" data-title="Elementary School - San Vicente">
+            <img src="elem.jpg" alt="Elementary School">
+          </a>
+          <a href="shs.jpg" class="glightbox" data-gallery="education" data-title="High School - San Isidro (Alcantara)">
+            <img src="shs.jpg" alt="High School">
+          </a>
+          <a href="cnsc.jpg" class="glightbox" data-gallery="education" data-title="College - Camarines Norte State College">
+            <img src="cnsc.jpg" alt="College">
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GLightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+  <script>
+    // Initialize GLightbox
+    const lightbox = GLightbox({
+      selector: '.glightbox',
+      loop: true,
+      zoomable: true,
+      draggable: true
+    });
+
+    // Toggle Hobbies and Education Sections
+    const readMoreBtn = document.getElementById('readMoreBtn');
+    const hobbiesSection = document.getElementById('hobbiesSection');
+    const educationSection = document.getElementById('educationSection');
+
+    readMoreBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      hobbiesSection.classList.toggle('show');
+      educationSection.classList.toggle('show');
+      readMoreBtn.textContent = hobbiesSection.classList.contains('show') ? "Show Less" : "Show More";
+    });
+  </script>
+</body>
+</html>
